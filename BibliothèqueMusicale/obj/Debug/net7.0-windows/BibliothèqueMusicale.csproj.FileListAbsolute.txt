@@ -27,3 +27,4 @@ C:\Users\PC\source\repos\BibliothèqueMusicale\BibliothèqueMusicale\obj\Debug\n
 C:\Users\PC\source\repos\BibliothèqueMusicale\BibliothèqueMusicale\obj\Debug\net7.0-windows\Themes\AlbumListView.baml
 C:\Users\PC\source\repos\BibliothèqueMusicale\BibliothèqueMusicale\obj\Debug\net7.0-windows\App.baml
 C:\Users\PC\source\repos\BibliothèqueMusicale\BibliothèqueMusicale\obj\Debug\net7.0-windows\Themes\Button.baml
+C:\Users\PC\source\repos\BibliothèqueMusicale\BibliothèqueMusicale\obj\Debug\net7.0-windows\Themes\Title.baml

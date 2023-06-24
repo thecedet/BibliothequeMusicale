@@ -8,6 +8,7 @@
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="Themes\AlbumListView.xaml"/>
                 <ResourceDictionary Source="Themes\Button.xaml"/>
+                <ResourceDictionary Source="Themes\Title.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>
