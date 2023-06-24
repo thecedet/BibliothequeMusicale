@@ -1,0 +1,49 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v7.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v7.0": {
+      "BibliothèqueMusicale/1.0.0": {
+        "dependencies": {
+          "BibliothèqueMusicale.ViewModel": "1.0.0"
+        },
+        "runtime": {
+          "BibliothèqueMusicale.dll": {}
+        }
+      },
+      "BibliothèqueMusicale.Model/1.0.0": {
+        "runtime": {
+          "BibliothèqueMusicale.Model.dll": {}
+        }
+      },
+      "BibliothèqueMusicale.ViewModel/1.0.0": {
+        "dependencies": {
+          "BibliothèqueMusicale.Model": "1.0.0"
+        },
+        "runtime": {
+          "BibliothèqueMusicale.ViewModel.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "BibliothèqueMusicale/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "BibliothèqueMusicale.Model/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "BibliothèqueMusicale.ViewModel/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
