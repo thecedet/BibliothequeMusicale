@@ -29,6 +29,7 @@ namespace BibliothèqueMusicale
         {
             Id = id;
             Nom = nom;
+            NoPiste = id;
             NoPiste++;
         }
     }

@@ -20,7 +20,10 @@ namespace BibliothèqueMusicale
             for(int i=0; i < 10; i++)
             {
                 AlbumViewModel album = new AlbumViewModel();
-                album.Pistes.Add(new Piste(i, "Salut"));
+                for(int j = 0; j < 10; j++)
+                {
+                    album.Pistes.Add(new Piste(j, $"Salut{i}"));
+                }
                 _albums.Add(album);
             }
 
