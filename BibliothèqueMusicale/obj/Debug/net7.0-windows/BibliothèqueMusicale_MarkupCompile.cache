@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\Joffrey\Source\Repos\BibliothequeMusicale\BibliothèqueMusicale\obj\Debug\net7.0-windows\
+C:\Users\PC\source\repos\BibliothèqueMusicale\BibliothèqueMusicale\obj\Debug\net7.0-windows\
 BibliothèqueMusicale
 none
 false
 TRACE;DEBUG;NET;NET7_0;NETCOREAPP
-C:\Users\Joffrey\Source\Repos\BibliothequeMusicale\BibliothèqueMusicale\App.xaml
-543249934
+C:\Users\PC\source\repos\BibliothèqueMusicale\BibliothèqueMusicale\App.xaml
+71423558958
 
-3-1233169557
-200310044272
-MainWindow.xaml;Themes\AlbumListView.xaml;Themes\Button.xaml;Themes\Title.xaml;Themes\TrackListView.xaml;
+5-1787886756
+200-204026205
+MainWindow.xaml;RightPanel.xaml;RightPanelOnly.xaml;Themes\AlbumListView.xaml;Themes\Button.xaml;Themes\Title.xaml;Themes\TrackListView.xaml;
 
 False
 

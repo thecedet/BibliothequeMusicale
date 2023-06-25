@@ -20,6 +20,8 @@ namespace BibliothèqueMusicale
     /// </summary>
     public partial class MainWindow : Window
     {
+        private readonly MainViewModel _mv;
+
         public MainWindow()
         {
             InitializeComponent();
@@ -36,6 +38,12 @@ namespace BibliothèqueMusicale
                 m.DoubleClick(elt);
             }*/
 
+        }
+
+        private void Button_MouseDown(object sender, RoutedEventArgs e)
+        {
+            RightPanelOnly rightPanelOnly = new RightPanelOnly(_mv);
+            rightPanelOnly.Show();
         }
     }
 }

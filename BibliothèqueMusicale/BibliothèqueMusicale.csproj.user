@@ -7,7 +7,21 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="RightPanel.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="RightPanelOnly.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
     <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="RightPanel.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="RightPanelOnly.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Themes\AlbumListView.xaml">
