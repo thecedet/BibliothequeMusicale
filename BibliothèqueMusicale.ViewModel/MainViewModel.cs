@@ -17,10 +17,11 @@ namespace BibliothèqueMusicale
 
         public MainViewModel()
         {
-            for(int i=0; i < 10; i++)
+
+            for (int i=0; i < 3; i++)
             {
                 AlbumViewModel album = new AlbumViewModel(i);
-                for(int j = 0; j < 10; j++)
+                for(int j = 0; j < 4; j++)
                 {
                     album.Pistes.Add(new Piste(j));
                 }
@@ -35,8 +36,7 @@ namespace BibliothèqueMusicale
         public void DoubleClick(AlbumViewModel album)
         {
 
-            _selectedAlbum = album;
-            OnPropertyChanged(nameof(SelectedAlbum));
+            SelectedAlbum = album;
 
         }
 
@@ -44,7 +44,6 @@ namespace BibliothèqueMusicale
         {
 
             SelectedAlbum.SelectedPiste = piste;
-            OnPropertyChanged(nameof(SelectedAlbum));
 
         }
 
@@ -83,10 +82,9 @@ namespace BibliothèqueMusicale
 
         private void AjouterPiste()
         {
-            Piste piste = new Piste(SelectedAlbum.Pistes.Count);
-            SelectedAlbum.Pistes.Add(piste);
-            SelectedAlbum.SelectedPiste = piste;
+            SelectedAlbum.AjouterPiste();
         }
+
 
         public ICommand SupprimerPisteCommand
         {
@@ -95,12 +93,10 @@ namespace BibliothèqueMusicale
 
         private void SupprimerPiste()
         {
-            if (SelectedAlbum.Pistes.Count > 1)
-            {
-                SelectedAlbum.Pistes.Remove(SelectedAlbum.SelectedPiste);
-                SelectedAlbum.SelectedPiste = SelectedAlbum.Pistes.First();
-            }
+            SelectedAlbum.SupprimerPiste();
         }
+
+
 
         public ObservableCollection<AlbumViewModel> Albums
         {

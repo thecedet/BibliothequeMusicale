@@ -30,7 +30,16 @@ namespace BibliothèqueMusicale
 
         }
 
-        private void ClickHandler(object sender, MouseButtonEventArgs e)
+        //private void ClickHandler(object sender, MouseButtonEventArgs e)
+        //{
+        //    if (DataContext is MainViewModel m && _lb.SelectedItem is AlbumViewModel elt)
+        //    {
+        //        m.DoubleClick(elt);
+        //    }
+
+        //}
+
+        private void SelectAlbum(object sender, SelectionChangedEventArgs args)
         {
             if (DataContext is MainViewModel m && _lb.SelectedItem is AlbumViewModel elt)
             {

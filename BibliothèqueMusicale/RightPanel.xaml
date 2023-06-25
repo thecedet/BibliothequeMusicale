@@ -37,7 +37,9 @@
                   Grid.Row="1"
                   x:Name="_pisteLb"
                   Grid.Column="0"
-                  MouseDoubleClick="ClickHandler"
+                  SelectionChanged="SelectPiste"
+                  SelectedItem="{Binding SelectedAlbum.SelectedPiste, Mode=TwoWay}"
+                      
                   ScrollViewer.HorizontalScrollBarVisibility="Disabled"
                   ItemsSource="{Binding SelectedAlbum.Pistes}"
                   Style="{StaticResource TrackListStyle}"                      

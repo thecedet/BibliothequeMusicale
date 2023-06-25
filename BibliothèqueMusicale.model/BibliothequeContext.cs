@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-
+using System.Collections.ObjectModel;
 
 namespace BibliothèqueMusicale
 {
@@ -12,16 +12,16 @@ namespace BibliothèqueMusicale
     {
         public int Id { get; set; }
 
-        public string Nom { get; set; } = "Le Nom";
-        public string Compositeur { get; set; } = "Le Compositeur";
-        public ICollection<Piste> Pistes { get; set; } = new HashSet<Piste>();
+        public string Nom { get; set; } = "Nouvel Album";
+        public string Compositeur { get; set; } = "Nouveau Compositeur";
+        public ObservableCollection<Piste> Pistes { get; set; } = new ObservableCollection<Piste>();
     }
 
     public class Piste
     {
         public int Id { get; set; }
 
-        public string Nom { get; set; } = "La piste";
+        public string Nom { get; set; } = "Nouvelle Piste";
 
         public int NoPiste { get; set; } = 0;
 

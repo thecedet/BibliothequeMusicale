@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,6 +23,23 @@ namespace BibliothèqueMusicale
         {
             _model = model;
             SelectedPiste = model.Pistes.First();
+        }
+
+        public void AjouterPiste()
+        {
+            Piste piste = new Piste(Pistes.Count);
+            Pistes.Add(piste);
+            SelectedPiste = piste;
+
+        }
+
+        public void SupprimerPiste()
+        {
+            if (Pistes.Count > 1)
+            {
+                Pistes.Remove(SelectedPiste);
+                SelectedPiste = Pistes.First();
+            }
         }
 
         public Album Model
@@ -56,7 +74,7 @@ namespace BibliothèqueMusicale
             }
         }
 
-        public ICollection<Piste> Pistes
+        public ObservableCollection<Piste> Pistes
         {
             get { return _model.Pistes; }
             set
