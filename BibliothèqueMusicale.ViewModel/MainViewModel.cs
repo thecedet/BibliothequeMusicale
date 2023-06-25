@@ -6,6 +6,7 @@ using System.Text.Json;
 using System.IO;
 using System.Threading.Tasks;
 using System.Diagnostics;
+using Calculatrice;
 
 namespace BibliothèqueMusicale
 {
@@ -31,6 +32,7 @@ namespace BibliothèqueMusicale
 
         }
 
+
         public void DoubleClick(AlbumViewModel album)
         {
 
@@ -38,17 +40,29 @@ namespace BibliothèqueMusicale
             OnPropertyChanged(nameof(SelectedAlbum));
 
         }
-
-        private void AjouterAlbum(Album album)
+        public ICommand AjouterAlbumCommand
         {
-            AlbumViewModel album_vm = new AlbumViewModel(album);
-            _albums.Add(album_vm);
+            get { return new RelayCommand<AlbumViewModel>(AjouterAlbum); }
+        }
+
+        private void AjouterAlbum(AlbumViewModel album)
+        {
+            _albums.Add(album);
+        }
+
+        public ICommand AjouterPisteCommand
+        {
+            get { return new RelayCommand<Piste>(AjouterPiste); }
         }
 
         private void AjouterPiste(Piste piste)
         {
-
             _selectedAlbum.Pistes.Add(piste);
+        }
+
+        public ICommand SupprimerPisteCommand
+        {
+            get { return new RelayCommand<Piste>(SupprimerPiste); }
         }
 
         private void SupprimerPiste(Piste piste)
