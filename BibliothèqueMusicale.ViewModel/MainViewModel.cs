@@ -19,7 +19,9 @@ namespace BibliothèqueMusicale
         {
             for(int i=0; i < 10; i++)
             {
-                _albums.Add(new AlbumViewModel());
+                AlbumViewModel album = new AlbumViewModel();
+                album.Pistes.Add(new Piste(i, "Salut"));
+                _albums.Add(album);
             }
 
             _selectedAlbum = _albums[0];

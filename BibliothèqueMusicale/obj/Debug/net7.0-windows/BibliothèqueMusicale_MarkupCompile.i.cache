@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET7_0;NETCOREAPP
 C:\Users\PC\source\repos\BibliothèqueMusicale\BibliothèqueMusicale\App.xaml
-4-1561494079
+543249934
 
 5-1915669497
 200-204026205
-MainWindow.xaml;Themes\AlbumListView.xaml;Themes\Button.xaml;Themes\Title.xaml;
+MainWindow.xaml;Themes\AlbumListView.xaml;Themes\Button.xaml;Themes\Title.xaml;Themes\TrackListView.xaml;
 
 True
 
