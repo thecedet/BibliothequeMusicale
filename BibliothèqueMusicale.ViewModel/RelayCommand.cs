@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 
-namespace BibliothèqueMusicale
+namespace Calculatrice
 {
     // ICommand représente une opération de l'application, lancée par un bouton, un menu...
     public class RelayCommand : ICommand
@@ -38,6 +38,40 @@ namespace BibliothèqueMusicale
         public void Execute(object? parameter)
         {
             _execute();
+        }
+    }
+
+    // ICommand représente une opération de l'application, lancée par un bouton, un menu...
+    public class RelayCommand<T> : ICommand
+    {
+        private readonly Action<T> _execute; // Réprésente une méthode void()
+
+        public RelayCommand(Action<T> execute)
+        {
+            _execute = execute;
+        }
+
+        public event EventHandler? CanExecuteChanged
+        {
+            add // Méthode exécutée lors de l'abonnement à l'évènement
+            {
+                // VIDE car aucune liste d'abonnés en mémoire
+            }
+            remove // Méthode exécutée lors du désabonnement
+            {
+                // VIDE car aucune liste d'abonnés en mémoire
+            }
+        }
+
+        // Détermine si l'opération est disponible (bouton grisé ou non)
+        public bool CanExecute(object? parameter)
+        {
+            return parameter is T p;
+        }
+
+        public void Execute(object? parameter)
+        {
+            if (parameter is T p) _execute(p);
         }
     }
 }
