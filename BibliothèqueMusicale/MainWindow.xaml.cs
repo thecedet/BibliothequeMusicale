@@ -20,7 +20,7 @@ namespace BibliothèqueMusicale
     /// </summary>
     public partial class MainWindow : Window
     {
-        private readonly MainViewModel _mv;
+        private MainViewModel _mv;
 
         public MainWindow()
         {
@@ -32,7 +32,6 @@ namespace BibliothèqueMusicale
 
         private void ClickHandler(object sender, MouseButtonEventArgs e)
         {
-            MessageBox.Show("Salut");
             if (DataContext is MainViewModel m && _lb.SelectedItem is AlbumViewModel elt)
             {
                 m.DoubleClick(elt);
@@ -42,7 +41,8 @@ namespace BibliothèqueMusicale
 
         private void Button_MouseDown(object sender, RoutedEventArgs e)
         {
-            RightPanelOnly rightPanelOnly = new RightPanelOnly(_mv);
+            RightPanelOnly rightPanelOnly = new RightPanelOnly();
+            rightPanelOnly.DataContext = this.DataContext;
             rightPanelOnly.Show();
         }
     }

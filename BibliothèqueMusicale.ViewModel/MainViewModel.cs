@@ -6,13 +6,12 @@ using System.Text.Json;
 using System.IO;
 using System.Threading.Tasks;
 using System.Diagnostics;
-using Calculatrice;
 
 namespace BibliothèqueMusicale
 {
     public class MainViewModel : ViewModelBase
     {
-        private ObservableCollection<AlbumViewModel>? _albums = new ObservableCollection<AlbumViewModel>();
+        private ObservableCollection<AlbumViewModel> _albums = new ObservableCollection<AlbumViewModel>();
 
         private AlbumViewModel _selectedAlbum;
 
@@ -20,10 +19,10 @@ namespace BibliothèqueMusicale
         {
             for(int i=0; i < 10; i++)
             {
-                AlbumViewModel album = new AlbumViewModel();
+                AlbumViewModel album = new AlbumViewModel(i);
                 for(int j = 0; j < 10; j++)
                 {
-                    album.Pistes.Add(new Piste(j, $"Salut{i}"));
+                    album.Pistes.Add(new Piste(j));
                 }
                 _albums.Add(album);
             }
@@ -40,43 +39,86 @@ namespace BibliothèqueMusicale
             OnPropertyChanged(nameof(SelectedAlbum));
 
         }
-        public ICommand AjouterAlbumCommand
+
+        public void DoubleClickPiste(Piste piste)
         {
-            get { return new RelayCommand<AlbumViewModel>(AjouterAlbum); }
+
+            SelectedAlbum.SelectedPiste = piste;
+            OnPropertyChanged(nameof(SelectedAlbum));
+
         }
 
-        private void AjouterAlbum(AlbumViewModel album)
+        public ICommand AjouterAlbumCommand
         {
-            _albums.Add(album);
+            get { return new RelayCommand(AjouterAlbum); }
+        }
+
+        private void AjouterAlbum()
+        {
+            AlbumViewModel album = new AlbumViewModel(Albums.Count);
+            Albums.Add(album);
+            SelectedAlbum = album;
+        }
+
+        public ICommand SupprimerAlbumCommand
+        {
+            get { return new RelayCommand(SupprimerAlbum); }
+        }
+
+        private void SupprimerAlbum()
+        {
+            
+            if(Albums.Count > 1)
+            {
+                Albums.Remove(SelectedAlbum);
+                SelectedAlbum = Albums.First();
+            }
+
         }
 
         public ICommand AjouterPisteCommand
         {
-            get { return new RelayCommand<Piste>(AjouterPiste); }
+            get { return new RelayCommand(AjouterPiste); }
         }
 
-        private void AjouterPiste(Piste piste)
+        private void AjouterPiste()
         {
-            _selectedAlbum.Pistes.Add(piste);
+            Piste piste = new Piste(SelectedAlbum.Pistes.Count);
+            SelectedAlbum.Pistes.Add(piste);
+            SelectedAlbum.SelectedPiste = piste;
         }
 
         public ICommand SupprimerPisteCommand
         {
-            get { return new RelayCommand<Piste>(SupprimerPiste); }
+            get { return new RelayCommand(SupprimerPiste); }
         }
 
-        private void SupprimerPiste(Piste piste)
+        private void SupprimerPiste()
         {
-            _selectedAlbum.Pistes.Remove(piste);
+            if (SelectedAlbum.Pistes.Count > 1)
+            {
+                SelectedAlbum.Pistes.Remove(SelectedAlbum.SelectedPiste);
+                SelectedAlbum.SelectedPiste = SelectedAlbum.Pistes.First();
+            }
         }
 
         public ObservableCollection<AlbumViewModel> Albums
         {
-            get { return _albums; }
+            get{ return _albums; }
+            set
+            {
+                _albums = value;
+                OnPropertyChanged(nameof(Albums));
+            }
         }
         public AlbumViewModel SelectedAlbum
         {
             get { return _selectedAlbum; }
+            set
+            {
+                _selectedAlbum = value;
+                OnPropertyChanged(nameof(SelectedAlbum));
+            }
         }
 
     }

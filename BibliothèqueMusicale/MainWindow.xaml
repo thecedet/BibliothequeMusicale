@@ -19,16 +19,16 @@
         </Grid.ColumnDefinitions>
 
         <StackPanel Grid.Row="0" Grid.Column="0">
-            <TextBlock Text="Blibliothèque" FontSize="20" Margin="7,7,0,0" FontWeight="Bold" Foreground="White" FontStyle="Italic"/>
+            <TextBlock Text="Bibliothèque" FontSize="20" Margin="7,7,0,0" FontWeight="Bold" Foreground="White" FontStyle="Italic"/>
             <TextBlock Text="Musicale" FontSize="20" Margin="7,0,0,0" FontWeight="Bold" Foreground="White" FontStyle="Italic"/>
             <TextBlock Text="Albums" Foreground="White" Margin="7,20,0,7" FontSize="12" FontWeight="Medium"/>
         </StackPanel>
 
         <ListView Background="#2c3e50"
-                  MouseDoubleClick="ClickHandler"
                   Grid.Row="1"
                   Grid.Column="0"
                   x:Name="_lb"
+                  MouseDoubleClick="ClickHandler"
                   ScrollViewer.HorizontalScrollBarVisibility="Disabled"
                   ItemsSource="{Binding Albums}"
                   Style="{StaticResource ListStyle}"
@@ -43,8 +43,8 @@
                 <ColumnDefinition />
             </Grid.ColumnDefinitions>
 
-            <Button Grid.Column="0" Content="Ajouter" HorizontalAlignment="Stretch" Style="{StaticResource CustomButtonStyle}" Background="#1abc9c" />
-            <Button Grid.Column="1" Content="Supprimer" HorizontalAlignment="Stretch" Style="{StaticResource CustomButtonStyle}" Background="#e74c3c"/>
+            <Button Grid.Column="0" Content="Ajouter" HorizontalAlignment="Stretch" Style="{StaticResource CustomButtonStyle}" Background="#1abc9c" Command="{Binding AjouterAlbumCommand}"  />
+            <Button Grid.Column="1" Content="Supprimer" HorizontalAlignment="Stretch" Style="{StaticResource CustomButtonStyle}" Background="#e74c3c" Command="{Binding SupprimerAlbumCommand}"/>
         </Grid>
         
         

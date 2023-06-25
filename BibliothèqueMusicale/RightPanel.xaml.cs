@@ -24,5 +24,14 @@ namespace BibliothèqueMusicale
         {
             InitializeComponent();
         }
+
+        private void ClickHandler(object sender, MouseButtonEventArgs e)
+        {
+            if (DataContext is MainViewModel m && _pisteLb.SelectedItem is Piste elt)
+            {
+                m.DoubleClickPiste(elt);
+            }
+
+        }
     }
 }

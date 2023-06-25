@@ -12,8 +12,8 @@ namespace BibliothèqueMusicale
     {
         public int Id { get; set; }
 
-        public string Nom { get; set; } = "dfdfdf";
-        public string Compositeur { get; set; } = "dsfgfdh";
+        public string Nom { get; set; } = "Le Nom";
+        public string Compositeur { get; set; } = "Le Compositeur";
         public ICollection<Piste> Pistes { get; set; } = new HashSet<Piste>();
     }
 
@@ -21,16 +21,14 @@ namespace BibliothèqueMusicale
     {
         public int Id { get; set; }
 
-        public string Nom { get; set; } = "";
+        public string Nom { get; set; } = "La piste";
 
         public int NoPiste { get; set; } = 0;
 
-        public Piste(int id, string nom)
+        public Piste(int id)
         {
             Id = id;
-            Nom = nom;
-            NoPiste = id;
-            NoPiste++;
+            NoPiste = id+1;
         }
     }
 }

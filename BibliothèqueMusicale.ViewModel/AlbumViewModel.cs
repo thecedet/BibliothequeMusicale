@@ -8,21 +8,30 @@ namespace BibliothèqueMusicale
 {
     public class AlbumViewModel : ViewModelBase
     {
-        private readonly Album _model;
+        private Album _model;
+        private Piste? _selectedPiste;
 
-        public AlbumViewModel()
+        public AlbumViewModel(int id)
         {
             _model = new Album();
+            Id = id;
+            SelectedPiste = null;
         }
 
         public AlbumViewModel(Album model)
         {
             _model = model;
+            SelectedPiste = model.Pistes.First();
         }
 
         public Album Model
         {
             get { return _model; }
+            set
+            {
+                _model = value;
+                OnPropertyChanged(nameof(Model));
+            }
         }
 
         public string Nom
@@ -31,7 +40,19 @@ namespace BibliothèqueMusicale
             set
             {
                 _model.Nom = value;
+                OnPropertyChanged(nameof(Model));
                 OnPropertyChanged(nameof(Nom));
+            }
+        }
+
+        public Piste SelectedPiste
+        {
+            get { return _selectedPiste; }
+            set
+            {
+                _selectedPiste = value;
+                OnPropertyChanged(nameof(SelectedPiste));
+                OnPropertyChanged(nameof(Model));
             }
         }
 
@@ -41,7 +62,8 @@ namespace BibliothèqueMusicale
             set
             {
                 _model.Pistes = value;
-                OnPropertyChanged(nameof(Nom));
+                OnPropertyChanged(nameof(Model));
+                OnPropertyChanged(nameof(Pistes));
             }
         }
 
@@ -51,7 +73,8 @@ namespace BibliothèqueMusicale
             set
             {
                 _model.Compositeur = value;
-                OnPropertyChanged(nameof(Nom));
+                OnPropertyChanged(nameof(Model));
+                OnPropertyChanged(nameof(Compositeur));
             }
         }
 
@@ -61,7 +84,8 @@ namespace BibliothèqueMusicale
             set
             {
                 _model.Id = value;
-                OnPropertyChanged(nameof(Nom));
+                OnPropertyChanged(nameof(Model));
+                OnPropertyChanged(nameof(Id));
             }
         }
     }

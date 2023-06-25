@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 
-namespace Calculatrice
+namespace BibliothèqueMusicale
 {
     // ICommand représente une opération de l'application, lancée par un bouton, un menu...
     public class RelayCommand : ICommand

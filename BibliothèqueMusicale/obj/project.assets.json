@@ -45,19 +45,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Joffrey\\.nuget\\packages\\": {}
+    "C:\\Users\\PC\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Joffrey\\Source\\Repos\\BibliothequeMusicale\\BibliothèqueMusicale\\BibliothèqueMusicale.csproj",
+      "projectUniqueName": "C:\\Users\\PC\\source\\repos\\BibliothèqueMusicale\\BibliothèqueMusicale\\BibliothèqueMusicale.csproj",
       "projectName": "BibliothèqueMusicale",
-      "projectPath": "C:\\Users\\Joffrey\\Source\\Repos\\BibliothequeMusicale\\BibliothèqueMusicale\\BibliothèqueMusicale.csproj",
-      "packagesPath": "C:\\Users\\Joffrey\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Joffrey\\Source\\Repos\\BibliothequeMusicale\\BibliothèqueMusicale\\obj\\",
+      "projectPath": "C:\\Users\\PC\\source\\repos\\BibliothèqueMusicale\\BibliothèqueMusicale\\BibliothèqueMusicale.csproj",
+      "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\PC\\source\\repos\\BibliothèqueMusicale\\BibliothèqueMusicale\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Joffrey\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -71,8 +71,8 @@
         "net7.0-windows7.0": {
           "targetAlias": "net7.0-windows",
           "projectReferences": {
-            "C:\\Users\\Joffrey\\Source\\Repos\\BibliothequeMusicale\\BibliothèqueMusicale.ViewModel\\BibliothèqueMusicale.ViewModel.csproj": {
-              "projectPath": "C:\\Users\\Joffrey\\Source\\Repos\\BibliothequeMusicale\\BibliothèqueMusicale.ViewModel\\BibliothèqueMusicale.ViewModel.csproj"
+            "C:\\Users\\PC\\source\\repos\\BibliothèqueMusicale\\BibliothèqueMusicale.ViewModel\\BibliothèqueMusicale.ViewModel.csproj": {
+              "projectPath": "C:\\Users\\PC\\source\\repos\\BibliothèqueMusicale\\BibliothèqueMusicale.ViewModel\\BibliothèqueMusicale.ViewModel.csproj"
             }
           }
         }
@@ -105,7 +105,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
       }
     }
   }

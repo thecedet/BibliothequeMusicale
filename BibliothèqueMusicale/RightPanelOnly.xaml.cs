@@ -20,11 +20,9 @@ namespace BibliothèqueMusicale
     public partial class RightPanelOnly : Window
     {
 
-        public RightPanelOnly(MainViewModel mv)
+        public RightPanelOnly()
         {
             InitializeComponent();
-            MainViewModel _mv = new MainViewModel();
-            this.DataContext = _mv;
 
         }
     }
