@@ -90,7 +90,7 @@
                 </Grid.ColumnDefinitions>
 
                 <TextBox Grid.Column="0" Text="{Binding SelectedAlbum.Compositeur}" VerticalContentAlignment="Center" FontSize="20"/>
-                <Button Grid.Column="1" Content="Ajouter" HorizontalAlignment="Stretch" Style="{StaticResource CustomButtonStyle}" Background="#1abc9c" />
+                <Button Grid.Column="1" Content="Ajouter" HorizontalAlignment="Stretch" Style="{StaticResource CustomButtonStyle}" Background="#1abc9c" Command="" />
                 <Button Grid.Column="2" Content="Supprimer" HorizontalAlignment="Stretch" Style="{StaticResource CustomButtonStyle}" Background="#e74c3c"/>
             </Grid>
         </StackPanel>

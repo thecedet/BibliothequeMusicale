@@ -39,6 +39,23 @@ namespace BibliothèqueMusicale
 
         }
 
+        private void AjouterAlbum(Album album)
+        {
+            AlbumViewModel album_vm = new AlbumViewModel(album);
+            _albums.Add(album_vm);
+        }
+
+        private void AjouterPiste(Piste piste)
+        {
+
+            _selectedAlbum.Pistes.Add(piste);
+        }
+
+        private void SupprimerPiste(Piste piste)
+        {
+            _selectedAlbum.Pistes.Remove(piste);
+        }
+
         public ObservableCollection<AlbumViewModel> Albums
         {
             get { return _albums; }

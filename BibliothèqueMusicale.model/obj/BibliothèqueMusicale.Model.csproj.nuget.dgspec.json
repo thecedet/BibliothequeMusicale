@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\PC\\source\\repos\\BibliothèqueMusicale\\BibliothèqueMusicale.model\\BibliothèqueMusicale.Model.csproj": {}
+    "C:\\Users\\Joffrey\\Source\\Repos\\BibliothequeMusicale\\BibliothèqueMusicale.model\\BibliothèqueMusicale.Model.csproj": {}
   },
   "projects": {
-    "C:\\Users\\PC\\source\\repos\\BibliothèqueMusicale\\BibliothèqueMusicale.model\\BibliothèqueMusicale.Model.csproj": {
+    "C:\\Users\\Joffrey\\Source\\Repos\\BibliothequeMusicale\\BibliothèqueMusicale.model\\BibliothèqueMusicale.Model.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\PC\\source\\repos\\BibliothèqueMusicale\\BibliothèqueMusicale.model\\BibliothèqueMusicale.Model.csproj",
+        "projectUniqueName": "C:\\Users\\Joffrey\\Source\\Repos\\BibliothequeMusicale\\BibliothèqueMusicale.model\\BibliothèqueMusicale.Model.csproj",
         "projectName": "BibliothèqueMusicale.Model",
-        "projectPath": "C:\\Users\\PC\\source\\repos\\BibliothèqueMusicale\\BibliothèqueMusicale.model\\BibliothèqueMusicale.Model.csproj",
-        "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\PC\\source\\repos\\BibliothèqueMusicale\\BibliothèqueMusicale.model\\obj\\",
+        "projectPath": "C:\\Users\\Joffrey\\Source\\Repos\\BibliothequeMusicale\\BibliothèqueMusicale.model\\BibliothèqueMusicale.Model.csproj",
+        "packagesPath": "C:\\Users\\Joffrey\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Joffrey\\Source\\Repos\\BibliothequeMusicale\\BibliothèqueMusicale.model\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Joffrey\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -55,7 +55,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
         }
       }
     }
