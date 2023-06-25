@@ -33,10 +33,10 @@ namespace BibliothèqueMusicale
         private void ClickHandler(object sender, MouseButtonEventArgs e)
         {
             MessageBox.Show("Salut");
-            /*if (DataContext is MainViewModel m && _lb.SelectedItem is AlbumViewModel elt)
+            if (DataContext is MainViewModel m && _lb.SelectedItem is AlbumViewModel elt)
             {
                 m.DoubleClick(elt);
-            }*/
+            }
 
         }
 

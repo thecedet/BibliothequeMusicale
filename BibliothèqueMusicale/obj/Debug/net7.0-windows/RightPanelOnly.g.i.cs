@@ -53,7 +53,7 @@ namespace BibliothèqueMusicale {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/BibliothèqueMusicale;component/rightpanelonly.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/BibliothèqueMusicale;V1.0.0.0;component/rightpanelonly.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\RightPanelOnly.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

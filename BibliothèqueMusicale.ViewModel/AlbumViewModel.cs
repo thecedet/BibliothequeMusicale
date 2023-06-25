@@ -54,5 +54,15 @@ namespace BibliothèqueMusicale
                 OnPropertyChanged(nameof(Nom));
             }
         }
+
+        public int Id
+        {
+            get { return _model.Id; }
+            set
+            {
+                _model.Id = value;
+                OnPropertyChanged(nameof(Nom));
+            }
+        }
     }
 }

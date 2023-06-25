@@ -28,6 +28,7 @@
                   MouseDoubleClick="ClickHandler"
                   Grid.Row="1"
                   Grid.Column="0"
+                  x:Name="_lb"
                   ScrollViewer.HorizontalScrollBarVisibility="Disabled"
                   ItemsSource="{Binding Albums}"
                   Style="{StaticResource ListStyle}"
