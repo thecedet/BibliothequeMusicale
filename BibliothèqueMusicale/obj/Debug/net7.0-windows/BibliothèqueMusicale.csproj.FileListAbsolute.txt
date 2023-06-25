@@ -29,3 +29,8 @@ C:\Users\PC\source\repos\BibliothèqueMusicale\BibliothèqueMusicale\obj\Debug\n
 C:\Users\PC\source\repos\BibliothèqueMusicale\BibliothèqueMusicale\obj\Debug\net7.0-windows\Themes\Button.baml
 C:\Users\PC\source\repos\BibliothèqueMusicale\BibliothèqueMusicale\obj\Debug\net7.0-windows\Themes\Title.baml
 C:\Users\PC\source\repos\BibliothèqueMusicale\BibliothèqueMusicale\obj\Debug\net7.0-windows\Themes\TrackListView.baml
+C:\Users\PC\source\repos\BibliothèqueMusicale\BibliothèqueMusicale\obj\Debug\net7.0-windows\RightPanel.g.cs
+C:\Users\PC\source\repos\BibliothèqueMusicale\BibliothèqueMusicale\obj\Debug\net7.0-windows\GeneratedInternalTypeHelper.g.cs
+C:\Users\PC\source\repos\BibliothèqueMusicale\BibliothèqueMusicale\obj\Debug\net7.0-windows\RightPanel.baml
+C:\Users\PC\source\repos\BibliothèqueMusicale\BibliothèqueMusicale\obj\Debug\net7.0-windows\RightPanelOnly.g.cs
+C:\Users\PC\source\repos\BibliothèqueMusicale\BibliothèqueMusicale\obj\Debug\net7.0-windows\RightPanelOnly.baml

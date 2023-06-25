@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BibliothèqueMusicale"
         mc:Ignorable="d"
-        Background="#222222"
+        Background="#2c3e50"
         Title="MainWindow" Height="600" Width="1050">
     <Grid>
         <Grid.RowDefinitions>
@@ -24,7 +24,7 @@
             <TextBlock Text="Albums" Foreground="White" Margin="7,20,0,7" FontSize="12" FontWeight="Medium"/>
         </StackPanel>
 
-        <ListView Background="#252525"
+        <ListView Background="#2c3e50"
                   MouseDoubleClick="ClickHandler"
                   Grid.Row="1"
                   Grid.Column="0"
@@ -49,53 +49,19 @@
         
         <!-- Panneau détail album -->
 
-        <Grid Grid.Column="1" Margin="0,10,0,0">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="Auto" />
-                <ColumnDefinition Width="*" />
-            </Grid.ColumnDefinitions>
-            <Grid.RowDefinitions>
-                <RowDefinition />
-                <RowDefinition/>
-            </Grid.RowDefinitions>
+        <ContentControl Grid.Column="1" Grid.RowSpan="2">
+            <ContentControl.Content>
+                <local:RightPanel />
+            </ContentControl.Content>
+        </ContentControl>
 
-            <TextBlock Text="Compositeur : " Style="{StaticResource TitleStyle}"/>
-            <TextBlock Grid.Row="1" Text="Album : " Style="{StaticResource TitleStyle}" Margin="0,10,0,0"/>
+        <Button Grid.Column="1" 
+                Grid.Row="2" 
+                Content="Ouvrir dans une nouvelle fenêtre" 
+                Style="{StaticResource CustomButtonStyle}"
+                Background="#2ecc71" 
+                Click="Button_MouseDown"/>
 
-            <TextBox Grid.Column="1" Text="{Binding SelectedAlbum.Compositeur}" VerticalContentAlignment="Center" FontSize="20"/>
-            <TextBox Grid.Column="1" Grid.Row="1" Text="{Binding SelectedAlbum.Nom}" VerticalContentAlignment="Center" FontSize="20" Margin="0,10,0,0"/>
-
-        </Grid>
-
-        <StackPanel Grid.Row="1" Grid.Column="1" Margin="30">
-            <TextBlock Text="Pistes : " Style="{StaticResource TitleStyle}" HorizontalAlignment="Left"/>
-
-            <ListView Background="#252525"
-                  MouseDoubleClick="ClickHandler"
-                  Grid.Row="1"
-                  Grid.Column="0"
-                  ScrollViewer.HorizontalScrollBarVisibility="Disabled"
-                  ItemsSource="{Binding SelectedAlbum.Pistes}"
-                  Style="{StaticResource TrackListStyle}"                      
-                  VerticalAlignment="Top"
-                  DockPanel.Dock="Top"
-                  >
-            </ListView>
-
-            <Grid Grid.Row="2" MinHeight="50">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition />
-                    <ColumnDefinition />
-                    <ColumnDefinition />
-                </Grid.ColumnDefinitions>
-
-                <TextBox Grid.Column="0" Text="{Binding SelectedAlbum.Compositeur}" VerticalContentAlignment="Center" FontSize="20"/>
-                <Button Grid.Column="1" Content="Ajouter" HorizontalAlignment="Stretch" Style="{StaticResource CustomButtonStyle}" Background="#1abc9c" />
-                <Button Grid.Column="2" Content="Supprimer" HorizontalAlignment="Stretch" Style="{StaticResource CustomButtonStyle}" Background="#e74c3c"/>
-            </Grid>
-        </StackPanel>
-
-        <Button Grid.Column="1" Grid.Row="2" Content="Ouvrir dans une nouvelle fenêtre" HorizontalAlignment="Stretch" Style="{StaticResource CustomButtonStyle}" Background="#2ecc71" />
 
     </Grid>
 </Window>
